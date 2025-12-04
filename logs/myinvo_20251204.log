@@ -1,0 +1,5 @@
+2025-12-04 01:27:24 - INFO - __init__:104 - === Démarrage de myInvo v1.4.1 ===
+2025-12-04 01:27:24 - INFO - __init__:105 - Système: nt - Python: 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]
+2025-12-04 01:27:24 - INFO - __init__:106 - Répertoire de travail: I:\project\myInvo\installer\myInvo
+2025-12-04 01:27:24 - WARNING - log_warning:1131 - ATTENTION: Application démarrée sans clé d'activation valide
+2025-12-04 01:27:27 - INFO - log_info:1135 - INFO: === Fermeture de myInvo ===
