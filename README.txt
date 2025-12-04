@@ -1,7 +1,4 @@
-===============================================
-               myInvo - Guide d'utilisation
-               Version 1.4 avec système de licence sécurisé
-===============================================
+myInvo - Guide d'utilisation
 
 INSTALLATION
 ============
@@ -70,6 +67,4 @@ NOTES IMPORTANTES
 ⚠️ La désinstallation supprime toutes les données utilisateur
 ⚠️ Effectuez des sauvegardes régulières de vos documents
 
-===============================================
-            © 2025 - Julien Gataleta
-===============================================
+
