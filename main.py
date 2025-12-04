@@ -84,8 +84,9 @@ class ApplicationFacturation(QMainWindow):
         # Initialiser le gestionnaire de licence
         self.license_manager = LicenseManager(self.working_dir)
         
-        # Vérifier s'il y a une clé d'installation depuis l'installateur
-        self.check_installer_key()
+        # Vérifier s'il y a une clé d'installation depuis l'installateur (différé pour optimiser le démarrage)
+        from PyQt6.QtCore import QTimer
+        QTimer.singleShot(50, self.check_installer_key)
         
         self.config_file = os.path.join(self.working_dir, "config", "config_entreprise.json")
         self.preferences_file = os.path.join(self.working_dir, "config", "preferences_utilisateur.json")
@@ -105,8 +106,10 @@ class ApplicationFacturation(QMainWindow):
         self.logger.info(f"Système: {os.name} - Python: {sys.version}")
         self.logger.info(f"Répertoire de travail: {self.working_dir}")
         
-        # Vérifier la licence au démarrage
-        self.check_license()
+        # Déferrer la vérification de licence après l'affichage de l'interface 
+        # pour améliorer les performances de démarrage
+        from PyQt6.QtCore import QTimer
+        QTimer.singleShot(100, self.check_license)  # Vérifier dans 100ms
     
     def setup_working_directory(self):
         """Configure le répertoire de travail selon le mode d'exécution"""
